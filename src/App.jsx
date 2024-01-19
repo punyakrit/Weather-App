@@ -16,7 +16,6 @@ function App() {
     const fetchWeather = async () => {
       await getFormattedWeatherData({ ...query, units }).then((data) => {
         setWeather(data);
-        console.log(data);
       });
     };
     fetchWeather();
