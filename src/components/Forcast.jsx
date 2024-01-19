@@ -10,7 +10,10 @@ function Forcast({ title, items }) {
       <hr className="my-2" />
       <div className="flex items-center flex-row justify-between text-white">
         {items.map((item) => (
-          <div className="flex flex-col items-center justify-center" key={item.title}>
+          <div
+            className="flex flex-col items-center justify-center"
+            key={item.title}
+          >
             <p className="font-light text-sm">{item.title}</p>
             <img
               src={iconUrlFromCode(item.icon)}
