@@ -25,13 +25,13 @@ function Details({
 }) {
   return (
     <div>
-      <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
+      <div className="flex items-center justify-center py-4 text-lg md:text-xl text-cyan-300">
         <p>{details}</p>
       </div>
-      <div className="flex flex-row items-center justify-between text-white py-3">
-        <img src={iconUrlFromCode(icon)} className="w-20"></img>
-        <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <div className="flex flex-col space-y-2">
+      <div className="flex flex-col md:flex-row items-center justify-center text-white py-2 md:py-3">
+        <img src={iconUrlFromCode(icon)} className="w-16 md:w-20" alt="Weather Icon" />
+        <p className="text-3xl md:text-5xl">{`${temp.toFixed()}°`}</p>
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature className="mr-1" size={18} />
             Real feel:
@@ -51,7 +51,7 @@ function Details({
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm py-3">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-x-2 text-white text-xs md:text-sm py-2 md:py-3">
         <UilSun />
         <p className="font-light">
           Rise
@@ -59,7 +59,7 @@ function Details({
             {formatToLocalTime(sunrise, timezone, "hh:mm a")}
           </span>
         </p>
-        <p className="font-light">|</p>
+        <p className="font-light md:hidden">|</p>
         <UilSunset />
         <p className="font-light">
           Set
@@ -67,13 +67,13 @@ function Details({
             {formatToLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </p>
-        <p className="font-light">|</p>
+        <p className="font-light md:hidden">|</p>
         <UilSun />
         <p className="font-light">
           High
           <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
         </p>
-        <p className="font-light">|</p>
+        <p className="font-light md:hidden">|</p>
         <UilSun />
         <p className="font-light">
           Low

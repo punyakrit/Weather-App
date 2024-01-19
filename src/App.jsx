@@ -23,7 +23,7 @@ function App() {
   }, [query, units]);
 
   return (
-    <div className="mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 rounded-lg">
+    <div className="mx-auto max-w-screen-md mt-4 py-5 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-teal-500 to-blue-700 h-fit shadow-xl shadow-gray-400 rounded-lg">
       <TopButton setQuery={setQuery} />
       <Input setQuery={setQuery} units={units} setUnits={setUnits} />
 
